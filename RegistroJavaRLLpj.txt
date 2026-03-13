@@ -1,0 +1,113 @@
+package vistas;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class registro extends JFrame implements ActionListener {
+
+	public registro() {
+		componentes();
+	}
+	public void componentes() {
+		this.setTitle("Registro de Cuenta");
+		this.setSize(300, 500);
+		this.setLocationRelativeTo(null);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setLocationRelativeTo(null);
+		this.setResizable(false);
+		this.setLayout(null);
+		
+		lbNombre.setText("Nombre: ");
+		lbNombre.setBounds(125, 50, 100, 20);
+		this.add(lbNombre);
+		
+		txtNombre.setBounds(100, 75, 100, 20);
+		this.add(txtNombre);
+		
+		lbApellidos.setText("Apellidos: ");
+		lbApellidos.setBounds(125, 100, 100, 20);
+		this.add(lbApellidos);
+		
+		txtApellidos.setBounds(100, 125, 100, 20);
+		this.add(txtApellidos);
+		
+		lbFecha.setText("Fecha de Nacimiento: ");
+		lbFecha.setBounds(90, 150, 150, 20);
+		this.add(lbFecha);
+		
+		txtDia.setBounds(100, 175, 25, 20);
+		this.add(txtDia);
+		
+		txtMes.setBounds(132, 175, 25, 20);
+		this.add(txtMes);
+		
+		txtAño.setBounds(165, 175, 35, 20);
+		this.add(txtAño);
+		
+		lbCE.setText("Correo Electronico: ");
+		lbCE.setBounds(90, 200, 150, 20);
+		this.add(lbCE);
+		
+		txtCE.setBounds(100, 225, 100, 20);
+		this.add(txtCE);
+		
+		lbContraseña.setText("Contraseña: ");
+		lbContraseña.setBounds(115, 250, 150, 20);
+		this.add(lbContraseña);
+		
+		txtContraseña.setBounds(100, 275, 100, 20);
+		this.add(txtContraseña);
+		
+		lbConfirmacion.setText("Confirmacion de contraseña: ");
+		lbConfirmacion.setBounds(75, 300, 200, 20);
+		this.add(lbConfirmacion);
+		
+		txtConfirmacion.setBounds(100, 325, 100, 20);
+		this.add(txtConfirmacion);
+		
+		btnRegistrar.setText("Registrar");
+		btnRegistrar.setBounds(25, 375, 100, 25);
+		btnRegistrar.setBackground(new Color(124,252,0));
+		this.add(btnRegistrar);
+		
+		btnCancelar.setText("Cancelar");
+		btnCancelar.setBounds(175, 375, 100, 25);
+		btnCancelar.setBackground(new Color(255,69,0));
+		this.add(btnCancelar);
+		
+		btnCuenta.setText("Tengo una cuenta");
+		btnCuenta.setBounds(80, 425, 140, 25);
+		this.add(btnCuenta);
+		
+		this.show();
+	}
+	@Override
+	public void actionPerformed(ActionEvent r) {
+		Object s = new Object();
+		s=r.getSource();
+		
+		
+	}
+	JLabel lbNombre=new JLabel();
+	JTextField txtNombre=new JTextField();
+	
+	JLabel lbApellidos=new JLabel();
+	JTextField txtApellidos=new JTextField();
+	
+	JLabel lbFecha=new JLabel();
+	JTextField txtDia=new JTextField();
+	JTextField txtMes=new JTextField();
+	JTextField txtAño=new JTextField();
+	
+	JLabel lbCE=new JLabel();
+	JTextField txtCE=new JTextField();
+	
+	JLabel lbContraseña=new JLabel();
+	JTextField txtContraseña=new JTextField();
+	
+	JLabel lbConfirmacion=new JLabel();
+	JTextField txtConfirmacion=new JTextField();
+	
+	JButton btnCancelar=new JButton();
+	JButton btnRegistrar=new JButton();
+	JButton btnCuenta=new JButton();
+}
