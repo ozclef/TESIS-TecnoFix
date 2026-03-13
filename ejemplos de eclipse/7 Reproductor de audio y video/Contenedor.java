@@ -1,0 +1,30 @@
+
+import javax.swing.*;
+import java.awt.*;
+public class Contenedor extends Container 
+{
+
+public ImageIcon icono = new ImageIcon ("ProjectJIC.png");
+// La imagen que queremos de fondo, un fichero .gif
+
+
+// Redefinición del método paint()
+public void paint (Graphics g)
+{
+// Borramos todo y lo pintamos del color de fondo por defecto.
+Rectangle r = g.getClipBounds();
+g.setColor(this.getBackground());
+g.fillRect (r.x, r.y, r.width, r.height);
+
+// Pintamos la imagen
+g.drawImage (icono.getImage(), 0,0,this);
+
+// Hacemos que se pinten los botones dentro de este contenedor
+super.paint(g);
+}
+
+
+
+}
+
+    
